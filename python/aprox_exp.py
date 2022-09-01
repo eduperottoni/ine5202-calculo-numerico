@@ -6,10 +6,7 @@ erro_admitido = 0.000001 #1*10^(-6)
 #valor exato
 exato = exp(x)
 #variáveis
-soma = 1
-potencia = 1 #numerador
-fatorial = 1 #denominador
-contador = 1
+soma = potencia = fatorial = contador = 1
 erro = abs(exato - soma)
 
 while erro > erro_admitido:
