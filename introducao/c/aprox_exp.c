@@ -10,8 +10,7 @@ int main(){
     //valor exato
     double exato = exp(x);
     //variáveis
-    double soma = 1;
-    double potencia = 1, fatorial = 1;
+    double potencia = 1, fatorial = 1, soma = 1;
     double erro = fabs(exato - soma);
     
     while (erro > erro_admitido){
