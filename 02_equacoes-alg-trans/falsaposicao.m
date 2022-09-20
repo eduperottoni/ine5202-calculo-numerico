@@ -17,7 +17,7 @@ function bissecao
       disp("Intervalo inválido para o método")
   else
       do
-          xm = (a + b) / 2;
+          xm = a - (funcao());
           ciclos++;
 
           if (funcao(a) * funcao(xm) < 0)
@@ -27,9 +27,9 @@ function bissecao
           endif
 
           valor = funcao(xm);
-          plot(xm, valor, 'r*')
-          hold on
-          pause
+          %plot(xm, valor, 'r*')
+          %hold on
+          %pause
       until (abs(funcao(xm)) < erro)
   endif
 
