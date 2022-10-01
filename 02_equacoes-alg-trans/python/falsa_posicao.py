@@ -16,7 +16,7 @@ if (f(a) * f(b) > 0):
 else:
     while (abs(fx) > erro):
         conta_ciclos += 1
-        xm = (a + b) / 2
+        xm = a - (f(a) * (b - a))/(f(b) - f(a))
         fx = f(xm)
 
         if (fx * f(a) < 0):
