@@ -13,7 +13,7 @@ erro = 10 ** (-8); conta_ciclos = 0;
 x0 = 1; xk = 0;
 fx0 = f(x0);
 
-while(fx0 > erro):
+while(abs(fx0) > erro):
     xk = x0 - fx0 / df(x0);
     conta_ciclos += 1;
 
