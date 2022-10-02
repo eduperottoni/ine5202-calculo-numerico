@@ -15,7 +15,7 @@ function newton # deve ter o mesmo nome do arquivo.m
 	grid % habilita linhas de grid
 	hold on % plota gráfico na mesma janela gráfica
 	
-    while (fx0 > erro)
+    while (abs(fx0) > erro)
         xk = x0 - (f(x0) / df(x0));
         conta_ciclos++;
 

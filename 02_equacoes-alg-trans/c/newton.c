@@ -14,11 +14,11 @@ double df(double arg) {
 
 int main(void) {
     int conta_ciclos = 0; 
-    double erro = 0.000000001;
+    double erro = pow(10, -8);
     double a = 0, b = 2;
     double x0 = 1, xk = 0, fx0 = f(x0);
 
-    while (fx0 > erro) {
+    while (fabs(fx0) > erro) {
         conta_ciclos++;
         xk = x0 - fx0 / df(x0);
 
