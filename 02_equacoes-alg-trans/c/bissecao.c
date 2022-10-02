@@ -3,28 +3,35 @@
 #include <math.h>
 
 double f(double arg) {
-    return (exp(arg) - 2 * cos(arg));
+    return exp(arg) - 2 * cos(arg);
+    // return exp(x) * sin(x) - 1;
 }
 
 int main(void) {
     int conta_ciclos = 0;
-    double a = 0, b = 2, erro = 0.000000001;
-    double xm = 2, fx = 1;
+    double a = 0, b = 2, erro = pow(10, -8);
+    double xm = 2, fxm = 1, fa = f(a), fb = f(b);
 
-    while (fabs(fx) > erro) {
+    while (fabs(fxm) > erro) {
         conta_ciclos++;
         xm = (a + b) / 2;
-        fx = f(xm);
-        if (fx * f(a) < 0)
+        fxm = f(xm);
+
+        if (fxm * f(a) < 0) {
             b = xm;
-        else
+            fb = fxm;
+        }
+        else {
             a = xm;
+            fa = fxm;
+        }
         
-        printf("f(xm): %.16lf\n", fx);
+        printf("f(xm): %.16lf\n", fxm);
+        printf("xm: %.16lf\n", xm);
     }
 
-    printf("Raiz: %.16lf\n", xm);
-    printf("f(raiz): %.16lf\n", fx);
+    printf("xm(raiz): %.16lf\n", xm);
+    printf("f(xm): %.16lf\n", fxm);
     printf("Ciclos: %d\n", conta_ciclos);
 
     return 0;
