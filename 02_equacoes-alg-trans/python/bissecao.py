@@ -2,10 +2,10 @@ import math
 
 def f(arg):
     #return math.exp(arg) * math.sin(arg) - 1
-    return math.e**arg - 2 * math.cos(arg)
+    return arg * math.cos(arg) + 1.9;
 #intervalo
-a = 0; b = 2
-erro = 10**-8; conta_ciclos = 0
+a = 2; b = 3
+erro = 10**-10; conta_ciclos = 0
 fxm = 1; fa = f(a); fb = f(b);
 xm = 2
 
