@@ -4,9 +4,10 @@ clc
 # Dados de entrada
 # 1 - Matriz de coeficientes
 # 2 - Matriz de termos independentes
-
-a = [1 -1 1; 2 3 -1; -3 1 1]; # ; -> dentro de vetor determina coluna
-b = [1 4 -1];
+a =[1 1 1.5 1 1.5 0 0 0 0 0; 0 1 0.01 0.51 1.5 0.5 0 0 0 0; 2.9 1 2 1 1 0 5 0 0 0; 9 1 0.2 1 1 0 0 1.5 0 0; 1 0 2 0 0 1 1 1 0 2; 0 1 0 0 -2 0 1 -1 1 1 ; 1 0 2 0 0 0 1 1 1 0; 0 1 0 0 2 0 1 1 1 -1; 0 0 1 0 2 1 -1 0 -1 -1; 0 1 0 0 2 0 1 0 1 1];
+#a = [1 -1 1; 2 3 -1; -3 1 1]; # ; -> dentro de vetor determina coluna
+b =[4 -3 1 -1 -1 0 -1 1 3 -2];
+#b = [1 4 -1];
 n = length(b);
 
 #Cópias da matriz/vetor para cálculo do resíduo
